@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eli's H.M — Food Products</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #030318;
+      color: #e9eef8;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(3,3,24,0.8);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00e5ff, #ff2d95);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-display: bottom;
+    }
+    nav a {
+      color: #e9eef8;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    
+    }
+    nav a:hover {
+      color: #00e5ff;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 40px;
+      scroll-snap-align: start;
+    }
+    /* HERO SECTION */
+.hero {
+  background-image: url("bg34.jpg"); /* palitan mo ng image mo */
+  background-size: cover;
+  background-position: center;
+  background-attachment:scroll; /* para may parallax effect */
+  height: 100vh;               /* buong screen ang taas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay para luminaw yung text */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* para nasa ibabaw ng overlay */
+  max-width: 700px;
+  padding: 20px;
+  padding-top: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px cyan;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: cyan;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: white;
+}
+
+    .products {
+      background: radial-gradient(600px at 30% 30%, rgba(255,45,149,0.08), transparent),
+                  #030318;
+      text-align: center;
+    }
+    .products h2 {
+      font-size: 36px;
+      color: #ff2d95;
+      text-shadow: 0 0 10px #ff2d95;
+      margin-bottom: 30px;
+    }
+    
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+  
+      
+    }
+
+    .product {
+      flex: 1 1 250px;
+      background-image: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px;
+    }
+    .product img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .about {
+      background: radial-gradient(800px at 50% 50%, rgba(0,229,255,0.06), transparent),
+                  #030318;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 36px;
+      color: #ff2d95;
+      text-shadow: 0 0 10px #ff2d95;
+      margin-bottom: 20px;
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: rgba(233,238,248,0.8);
+    }
+    .contact {
+      margin-top: 30px;
+    }
+    .contact h3 {
+      font-size: 24px;
+      color: #00e5ff;
+      text-shadow: 0 0 8px #00e5ff;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: rgba(233,238,248,0.7);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Eli's H.M</div>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#products">PRODUCTS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+ <section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Taste the Future</h1>
+    <p>“Taste and see that the Lord is good; blessed is the one who takes refuge in Him.”
+— Psalm 34:8</p>
+    <a href="#products" class="hero-btn">Explore More</a>
+  </div>
+</section>
+
+
+  <section id="products">
+  <h2>Our Products</h2>
+  <div class="products-grid">
+    <div class="product">
+      <img src="siomai2.jpg" alt="Product 1">
+      <h4>Chicken – Siomai</h4>
+      <p>P47 / pack</p>
+    </div>
+    <div class="product">
+      <img src="hamdog.jpg" alt="Product 2">
+      <h4>Chicken – hamdog</h4>
+      <p>P47 / pack</p>
+    </div>
+    <div class="product">
+      <img src="hamonado.jpg" alt="Product 3">
+      <h4>Longganisa – Hamonado</h4>
+      <p>P169 / pack</p>
+    </div>
+    <div class="product">
+      <img src="tocino.jpg" alt="Product 4">
+      <h4>Pork – Tocino</h4>
+      <p>P175 / pack</p>
+    </div>
+    <div class="product">
+      <img src="nuggets.jpg" alt="Product 5">
+      <h4>Chicken – Nuggets</h4>
+      <p>P69 / pack</p>
+    </div>
+</section>
+
+
+  <section id="about" class="about">
+    <h2>About Eli's Home Made food</h2>
+    <p>“Ang bawat produktong gawa sa aming kusina ay puno ng malasakit, panalangin, at pagmamahal ng pamilya. Layunin naming hindi lang mapasarap ang inyong panlasa, kundi mapaligaya rin ang bawat mamimili sa kakaibang lutong-bahay na aming inihahandog. 
+      Ang bawat kagat ay patunay na ang pagkain ay mas espesyal kapag ito ay ginawa nang may puso at pananampalataya.”</p>
+
+    <div id="contact" class="contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@neonbite.com" style="color:#00e5ff;">elizabethtullos@gmail.com</a></p>
+      <p>Phone: 0912-345-6789</p>
+      <p>Facebook: <a href="#" style="color:#00e5ff;">@Elizabeth Tullos</a></p>
+      <p>location: GWPCLC, LCM property, Roque 2 Brngy. Pasong Tamo Q.C</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NeonBite Co. All rights reserved.</p>
+  </footer>
+</body>
+</html>
